@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Style the Header */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .btn {
+  margin: 30px;
+  padding: 10px 20px;
+  border-radius: 500px;
+  height: 50px;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease-in-out;
+  background-color: #ccc;
+}
+
+header .btn:hover {
+  background-color: #3e8e41;
+  color: white;
+  box-shadow: 0 0 10px #3e8e41;
+  transform: translate3d(0, -2px, 0);
+  cursor: pointer;
+}
+
+header img {
+  width: auto;
+  height: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* Style the form container */
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .form-container {
+  width: 100%;
+  min-width: auto;
+  max-width: 1200px;
+  min-height: 600px;
+  max-height: 1000px;
+  background-color: #3e8e41;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  padding-left: 30px;
+}
+.form-field {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-field {
+  padding: 10px 50px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  row-gap: 20px;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/* Style the form elements */
+form label {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  line-height: 1.2;
+}
+
+form input {
+  padding: 0.5rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#tc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn-form {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 500px;
+  height: 50px;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bolder;
+  transition: transform 0.2s ease-in-out;
+  background-color: #f05f44;
+  border-color: #f05f44;
+}
+
+.btn-form:hover {
+  color: white;
+  background-color: black;
+  border-color: #f05f44;
+  box-shadow: 0 0 10px black;
+  border-width: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Style the form inputs */
+
+form input[type="text"],
+[type="email"],
+[type="tel"] {
+  width: 100%;
+  outline: none;
+  border: 2px solid #696969;
+  background: #fff;
+  padding: 0.6rem 1rem;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+[type="email"]:focus,
+[type="tel"]:focus {
+  border-color: #f05f44;
+}
+
+form input[type="radio"] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+form input[type="checkbox"] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+form input[type="radio"]:hover,
+form input[type="checkbox"]:hover {
+  transform: scale(1.2);
+}
+
+#error {
+  color: #171717;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/*Styes the footer */
+.footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .table {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 300px;
+  max-height: auto;
+  background-color: #3e8e41;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.7);
+}
+
+table {
+  padding: 2.3rem 2.2rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+table tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
