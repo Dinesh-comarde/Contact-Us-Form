@@ -32,6 +32,7 @@ header .btn:hover {
 }
 
 header img {
+  padding-left: 20px;
   width: auto;
   height: 50px;
   margin: 20px;
@@ -85,7 +86,7 @@ header img {
   justify-content: center;
 }
 
-.input-field {
+.contact-form {
   padding: 10px 50px;
   overflow: hidden;
   position: relative;
@@ -195,10 +196,10 @@ form input[type="checkbox"]:hover {
   transform: scale(1.2);
 }
 
-#error {
-  color: #171717;
-  font-weight: bolder;
-  font-size: 1.2rem;
+.error {
+  color: red;
+  font-weight: lighter;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -229,7 +230,7 @@ form input[type="checkbox"]:hover {
 }
 
 table {
-  padding: 2.3rem 2.2rem;
+  padding: 1rem 2.2rem;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -249,4 +250,117 @@ th {
 table tr:hover {
   background-color: #f5f5f5;
   cursor: pointer;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.action-btn {
+  border-radius: 500px;
+  padding: 5px 10px;
+  height: 29px;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bolder;
+  background-color: #f05f44;
+  border-color: #f05f44;
+}
+
+.action-btn:hover {
+  color: white;
+  background-color: black;
+  border-color: #f05f44;
+  box-shadow: 0 0 5px black;
+  border-width: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*Search Button and Input*/
+.searchData {
+  display: flex;
+  margin-left: 40px;
+}
+
+.searchData input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.searchData input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #f05f44;
+}
+
+.searchData input[type="text"]:hover {
+  outline: none;
+  background-color: #eee;
+}
+
+.searchData button {
+  float: left;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchData button:hover {
+  background: black;
+  color: white;
+}
+
+/* Style the footer links */
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.filters label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  line-height: 1.2;
+}
+
+#genders {
+  outline: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 8px;
+  cursor: progress;
+  font-size: 17px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+#genders:focus {
+  outline: none;
+  border: 1px solid #f05f44;
+}
+#genders:hover {
+  background-color: black;
+  color: white;
+}
+
+#genders option {
+  outline: none;
+  cursor: pointer;
+}
+
+#genders option:hover {
+  background-color: black;
+  color: white;
 }
