@@ -327,32 +327,40 @@ function dataTable(newData) {
 
 // Search Bar functionality
 window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("searchBar").addEventListener("input", function () {
+  const searchBar = document.getElementById("searchBar");
+  const genderFilter = document.getElementById("genders");
+
+  searchBar.addEventListener("input", function () {
     const searchValue = this.value.toLowerCase();
+    const selectedGender = genderFilter.value.toLowerCase();
+
     const filteredData = data.filter(function (item) {
       return (
-        item.name.toLowerCase().includes(searchValue) ||
-        item.email.toLowerCase().includes(searchValue) ||
-        item.phone.toLowerCase().includes(searchValue) ||
-        item.gender.toLowerCase().includes(searchValue)
+        (item.name.toLowerCase().includes(searchValue) ||
+          item.email.toLowerCase().includes(searchValue) ||
+          item.phone.toLowerCase().includes(searchValue)) &&
+        (selectedGender === "all" ||
+          item.gender.toLowerCase() === selectedGender)
       );
     });
-    console.log(filteredData);
+
     renderTable(filteredData);
   });
-});
 
-// Filter by gender dropdown
-window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("genders").addEventListener("change", function () {
+  genderFilter.addEventListener("change", function () {
     const selectedGender = this.value.toLowerCase();
-    console.log(selectedGender);
-    let filteredData = data;
-    if (selectedGender !== "all") {
-      filteredData = data.filter(function (item) {
-        return item.gender.toLowerCase() === selectedGender;
-      });
-    }
+    const searchValue = searchBar.value.toLowerCase();
+
+    const filteredData = data.filter(function (item) {
+      return (
+        (item.name.toLowerCase().includes(searchValue) ||
+          item.email.toLowerCase().includes(searchValue) ||
+          item.phone.toLowerCase().includes(searchValue)) &&
+        (selectedGender === "all" ||
+          item.gender.toLowerCase() === selectedGender)
+      );
+    });
+
     renderTable(filteredData);
   });
 });
@@ -390,8 +398,6 @@ function renderTable(data) {
       "</div>";
   });
 }
-
-// Search Bar functionality
 
 // Clearing the input fields
 
